@@ -10,6 +10,11 @@ import BaseLayout from './views/layouts/BaseLayout';
 import EmployeeEdit from './views/employees/EmployeeEdit';
 import EmployeeView from './views/employees/EmployeeView';
 import EmployeeList from './views/employees/EmployeeList';
+import ItemList from './views/items/ItemList';
+import ItemCreate from './views/items/ItemCreate';
+import ItemEdit from './views/items/ItemEdit';
+import ItemView from './views/items/ItemView';
+import OrderList from './views/orders/OrderList';
 function App() {
   return (
     // <React.StrictMode>
@@ -24,6 +29,18 @@ function App() {
               <Route path="create" element={<EmployeeCreate />} />
               <Route path=":id/edit" element={<EmployeeEdit />} />
               <Route path=":id" element={<EmployeeView />} />
+            </Route>
+            <Route path="items">
+              <Route index element={<ItemList />} />
+              <Route path="create" element={<ItemCreate />} />
+              <Route path=":id/edit" element={<ItemEdit />} />
+              <Route path=":id" element={<ItemView />} />
+            </Route>
+            <Route path="orders">
+              <Route index element={<OrderList />} />
+              {/* <Route path="create" element={<ItemCreate />} />
+              <Route path=":id/edit" element={<ItemEdit />} />
+              <Route path=":id" element={<ItemView />} /> */}
             </Route>
             <Route path="logout" element={<UserLogout />} />
           </Route>

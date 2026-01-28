@@ -15,7 +15,8 @@ export default function UserLogout() {
       await alertSuccess('Logged out successfully');
       navigate('/');
     } catch (err) {
-      await alertError(err.response?.data?.message || err.message);
+      navigate('/');
+      // await alertError(err.response?.data?.message || err.message);
     }
   }
 
